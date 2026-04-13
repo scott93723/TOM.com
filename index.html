@@ -1,184 +1,719 @@
 <!DOCTYPE html>
-<html  >
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.10.7, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="P-6XJyp63erlP_bmwIg5NUwRBc6krRsygUAFWlQz6AA" />
-  <link rel="shortcut icon" href="assets/images/main.JPG" type="image/x-icon">
-  <meta name="description" content="TOM水電修繕。桃園最強水電修繕。地址：320 桃園中壢高鐵南路三段727巷100號10樓。電話：0977-266-866">
+  <meta name="description" content="TOM水電修繕，20年老師傅經驗，提供住家與商業空間水電修繕、安裝與現場處理服務。地址：高鐵南路三段727巷100號10樓。電話：0977-266-866。">
+  <meta name="theme-color" content="#d8c3a5">
+  <title>TOM水電修繕｜質感修繕與空間細節</title>
+  <link rel="icon" href="assets/images/main.JPG" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f1eb;
+      --bg-soft: #fbf8f4;
+      --panel: rgba(255, 255, 255, 0.74);
+      --text: #2a2622;
+      --muted: #6f655c;
+      --line: rgba(42, 38, 34, 0.12);
+      --accent: #b69063;
+      --accent-deep: #8e6d47;
+      --shadow: 0 18px 60px rgba(34, 28, 22, 0.12);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --container: 1180px;
+    }
 
-  <title>TOM水電修繕 </title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    * {
+      box-sizing: border-box;
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(182, 144, 99, 0.12), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(142, 109, 71, 0.08), transparent 30%),
+        var(--bg);
+      line-height: 1.75;
+    }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(245, 241, 235, 0.72);
+      border-bottom: 1px solid rgba(42, 38, 34, 0.07);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.6);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      flex: none;
+    }
+
+    .brand-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(142, 109, 71, 0.28);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.5);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 56px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-visual {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 56px;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,0.82), rgba(249,245,239,0.92)),
+        url('assets/images/erik-binggeser-u1f5mnvgc-o-unsplash-2000x1333.jpg') center/cover;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: 0.01em;
+      max-width: 9ch;
+    }
+
+    .hero-lead {
+      margin: 24px 0 0;
+      max-width: 34rem;
+      font-size: 1.04rem;
+      color: #504740;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .hero-notes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 42px;
+    }
+
+    .note-card {
+      background: rgba(255,255,255,0.56);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .note-label {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 6px;
+    }
+
+    .note-value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .hero-visual {
+      min-height: 620px;
+      background: #ddd;
+    }
+
+    .hero-visual img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      background: rgba(255,255,255,0.86);
+      color: var(--text);
+      border-radius: 20px;
+      padding: 16px 18px;
+      max-width: 220px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-badge strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      line-height: 1;
+    }
+
+    .section-heading p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 38rem;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .service-card {
+      padding: 34px;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .service-card li {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      color: #4f463f;
+    }
+
+    .service-card li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .service-card li::before {
+      content: "✦";
+      color: var(--accent-deep);
+      margin-top: 2px;
+      flex: none;
+    }
+
+    .image-card {
+      min-height: 100%;
+    }
+
+    .image-card img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      min-height: 260px;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item.large {
+      grid-column: span 7;
+    }
+
+    .gallery-item.medium {
+      grid-column: span 5;
+    }
+
+    .gallery-item.small {
+      grid-column: span 4;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(32,27,22,0.12), rgba(32,27,22,0.6));
+      color: #fff;
+      backdrop-filter: blur(8px);
+      font-size: 0.95rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 0.9fr 1.2fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .info-card {
+      padding: 28px;
+    }
+
+    .info-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+    }
+
+    .info-card p {
+      margin: 0;
+      color: #4f463f;
+    }
+
+    .info-card strong {
+      font-size: 1.18rem;
+      color: var(--text);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .cta {
+      padding-bottom: 70px;
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1.1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 34px;
+    }
+
+    .cta-box h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1;
+    }
+
+    .cta-box p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 38rem;
+    }
+
+    .site-footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-align: center;
+    }
+
+    .site-footer a {
+      color: var(--accent-deep);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .split-grid,
+      .info-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .hero-visual {
+        min-height: 440px;
+      }
+
+      .gallery-item.large,
+      .gallery-item.medium,
+      .gallery-item.small {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0 18px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-copy {
+        padding: 28px;
+      }
+
+      .hero-notes {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item.large,
+      .gallery-item.medium,
+      .gallery-item.small {
+        grid-column: span 1;
+      }
+
+      .cta-box {
+        padding: 26px;
+      }
+    }
+  </style>
 </head>
-<body>
-  <section class="menu cid-rznI5aCAdr" once="menu" id="menu1-6">
+<body id="top">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="TOM水電修繕首頁">
+        <span class="brand-mark">
+          <img src="assets/images/icon1.JPG" alt="TOM水電修繕標誌">
+        </span>
+        <span>
+          <div class="brand-title">TOM</div>
+          <div class="brand-subtitle">Water · Electric · Repair</div>
+        </span>
+      </a>
 
-
-
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="#top">
-                         <img src="assets/images/icon1.JPG" alt="Mobirise" title="" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="#top">TOM水電修繕&nbsp;<br></a></span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
-        </div>
-    </nav>
-</section>
-
-<section class="engine"><a href="https://mobirise.info/m">free web design templates</a></section><section class="cid-rzaUM99NaS mbr-fullscreen mbr-parallax-background" id="header2-1">
-
-
-
-    <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(35, 35, 35);"></div>
-
-    <div class="container align-center">
-        <div class="row justify-content-md-center">
-            <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">TOM水電修繕<br>地表最強水電徵老婆&nbsp;</h1>
-            </div>
-        </div>
+      <nav class="nav-links" aria-label="主選單">
+        <a href="#about">關於我們</a>
+        <a href="#works">作品氛圍</a>
+        <a href="#contact">聯絡方式</a>
+        <a class="btn btn-primary" href="tel:0977266866">立即來電</a>
+      </nav>
     </div>
-    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
-        </a>
-    </div>
-</section>
+  </header>
 
-<section class="mbr-section content4 cid-rzzcCAtlOX" id="content4-b">
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Refined Repair for Better Living</div>
+            <h1>TOM 水電修繕</h1>
+            <p class="hero-lead">
+              修的不只是水電，更是空間住起來的舒服感。以俐落施工、乾淨收尾與現場判斷經驗，讓日常使用回到穩定、好看、好住的狀態。
+            </p>
 
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="tel:0977266866">電話洽詢 0977-266-866</a>
+              <a class="btn btn-secondary" href="#works">看看現場風格</a>
+            </div>
+          </div>
 
+          <div class="hero-notes">
+            <div class="note-card">
+              <div class="note-label">經驗</div>
+              <div class="note-value">20 年老師傅</div>
+            </div>
+            <div class="note-card">
+              <div class="note-label">營業時間</div>
+              <div class="note-value">週一至週六 09:00–21:00</div>
+            </div>
+            <div class="note-card">
+              <div class="note-label">專注</div>
+              <div class="note-value">住家／商空修繕細節</div>
+            </div>
+          </div>
+        </div>
 
+        <div class="hero-visual">
+          <img src="assets/images/icon2.JPG" alt="TOM水電修繕現場作品照片">
+          <div class="hero-badge">
+            <strong>空間感，來自細節。</strong>
+            水電藏在看不見的地方，但做得好，整個空間就會舒服很多。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split-grid">
+        <div class="panel service-card">
+          <div class="eyebrow">About TOM</div>
+          <h2>老師傅經驗，搭配更講究的空間感</h2>
+          <p>
+            TOM水電修繕具備多年實務經驗，處理住家與商業空間常見的水電問題、設備安裝與現場調整。除了功能正常，也重視整體視覺、整潔度與完成後的使用感受。
+          </p>
+          <ul>
+            <li>住家與商業空間水電修繕</li>
+            <li>燈具、插座、線路與設備安裝</li>
+            <li>老屋局部修整與空間細節處理</li>
+            <li>現場判斷、快速處理、乾淨收尾</li>
+          </ul>
+        </div>
+
+        <div class="panel image-card">
+          <img src="assets/images/icon3.JPG" alt="室內空間感作品照片">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Mood & Details</div>
+            <h2>作品氛圍</h2>
+            <p>
+              把修繕網站做得像空間作品頁：用材質、光線、構圖去傳達穩定與質感，讓客戶第一眼就感覺到專業與安心。
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item large">
+            <img src="assets/images/IMG_0139.JPG" alt="修繕作品照 1">
+            <figcaption class="gallery-caption">細節收邊乾淨，空間看起來就會更俐落。</figcaption>
+          </figure>
+          <figure class="gallery-item medium">
+            <img src="assets/images/IMG_0140.JPG" alt="修繕作品照 2">
+            <figcaption class="gallery-caption">功能與美感並重，使用起來順手也耐看。</figcaption>
+          </figure>
+          <figure class="gallery-item small">
+            <img src="assets/images/IMG_0143.JPG" alt="修繕作品照 3">
+            <figcaption class="gallery-caption">住家日常最需要的，是穩定又舒服的細節。</figcaption>
+          </figure>
+          <figure class="gallery-item small">
+            <img src="assets/images/IMG_0146.JPG" alt="修繕作品照 4">
+            <figcaption class="gallery-caption">從管線到表面，重視現場整體完成度。</figcaption>
+          </figure>
+          <figure class="gallery-item medium">
+            <img src="assets/images/IMG_0150.JPG" alt="修繕作品照 5">
+            <figcaption class="gallery-caption">好的施工，不喧嘩，但會讓空間更有秩序。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2>聯絡與現場資訊</h2>
+            <p>需要估價、現場查看或電話詢問，都可以直接聯絡。</p>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="panel info-card">
+            <h3>營業時間</h3>
+            <p><strong>星期一到星期六</strong><br>09:00–21:00</p>
+          </div>
+
+          <div class="panel info-card">
+            <h3>聯絡方式</h3>
+            <p><strong>0977-266-866</strong><br><br>桃園中壢地區可電話洽詢</p>
+          </div>
+
+          <div class="panel map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.4131228532024!2d121.18892881500528!3d24.986074483994773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468215f81cd1d0f%3A0xa1e18ab276dd6bec!2zMzIw5qGD5ZyS5biC5Lit5aOi5Y2A6auY6ZC15Y2X6Lev5LiJ5q61NzI35be3MTAw6Jmf!5e0!3m2!1szh-TW!2stw!4v1608062286987!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TOM水電修繕地圖"></iframe>
+          </div>
+        </div>
+
+        <div class="panel info-card" style="margin-top:20px;">
+          <h3>地址</h3>
+          <p><strong>高鐵南路三段727巷100號10樓</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container panel cta-box">
+        <div>
+          <div class="eyebrow">Ready to Talk</div>
+          <h2>想把空間問題處理得俐落一點？</h2>
+          <p>直接來電，讓老師傅協助你判斷現場狀況與最適合的處理方式。</p>
+        </div>
+        <a class="btn btn-primary" href="tel:0977266866">立即聯絡 TOM</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-        <div class="media-container-row">
-            <div class="title col-12 col-md-8">
-                <h2 class="align-center pb-3 mbr-fonts-style display-2">TOM水電修繕  &nbsp;</h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5"><strong>TOM水電修繕 20年老師傅經驗</strong></h3>
-
-            </div>
-        </div>
+      本網站由 <a href="https://scott93723.github.io/Knowledge-Enterprise-Co-Ltd.com/">弘道實業有限公司</a> 維護製作
     </div>
-</section>
-
-<section class="mbr-section article content9 cid-rzzdr4wmVG" id="content9-c">
-
-
-
-    <div class="container">
-        <div class="inner-container" style="width: 100%;">
-            <hr class="line" style="width: 82%;">
-            <div class="section-text align-center mbr-fonts-style display-5"><strong>TOM水電修繕 學歷大安高工</strong></div>
-            <hr class="line" style="width: 82%;">
-        </div>
-        </div>
-</section>
-
-<section class="cid-rzzp61qw19" id="image4-9">
-    <!-- Block parameters controls (Blue "Gear" panel) -->
-
-    <!-- End block parameters -->
-    <div class="container images-container">
-            <div class="media-container-row" style="width: 80%;">
-                <div class="img-item item1" style="width: 136%;">
-                    <img src="assets/images/icon2.JPG" alt="" title="">
-
-                </div>
-                <div class="img-item">
-                    <img src="assets/images/icon3.JPG" alt="" title="">
-
-                </div>
-            </div>
-    </div>
-</section>
-
-<section class="cid-rzzaMRCLRX" id="footer2-9">
-
-
-
-
-
-    <div class="container">
-        <div class="media-container-row content mbr-white">
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <p class="mbr-text"><strong>營業時間：
-</strong><br><br>星期一到星期六
-<br>09:00~21:00</p>
-            </div>
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <p class="mbr-text"><strong>地址&nbsp;：&nbsp;</strong><br>
-<br>高鐵南路三段727巷100號10樓
-<br>
-<br>
-<br><strong>聯絡方式&nbsp;：&nbsp;<br></strong>
-<br>電話 :0977-266-866 <br><br></p>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.4131228532024!2d121.18892881500528!3d24.986074483994773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468215f81cd1d0f%3A0xa1e18ab276dd6bec!2zMzIw5qGD5ZyS5biC5Lit5aOi5Y2A6auY6ZC15Y2X6Lev5LiJ5q61NzI35be3MTAw6Jmf!5e0!3m2!1szh-TW!2stw!4v1608062286987!5m2!1szh-TW!2stw" allowfullscreen=""></iframe></div>
-            </div>
-       
-        </div>
-
-    </div>
-</section>
-
-<section once="footers" class="cid-rznN35r9It" id="footer6-c">
-
-
-
-
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                    本網站由<a href="https://scott93723.github.io/Knowledge-Enterprise-Co-Ltd.com/" class="text-success">弘道實業有限公司</a>維護製作
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/dropdown/js/nav-dropdown.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-
-
+  </footer>
 </body>
 </html>
